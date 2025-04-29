@@ -53,17 +53,11 @@
 <body>
     <div class="container">
         <h1>Welcome, {{ $name }}!</h1>
-
-        <p>Thank you for joining our platform. We're excited to have you on board!</p>
-
-        <p>We offer a wide range of products to satisfy your needs. </p>
-
-        <p>Feel free to <a href="/" class="button">Explore our products</a> and discover all the amazing features we have to offer.</p>
-
+        <p>Thank you!</p>
+        <p>Feel free to <a href="/" class="button">Explore our products</a></p>
         <p>If you have any questions, please don't hesitate to contact us at support@example.com.</p>
-
         <div class="footer">
-            © {{ date('Y') }} Your Company Name. All rights reserved.
+            © {{ date('Y') }} sma3in. All rights reserved.
         </div>
     </div>
 </body>
