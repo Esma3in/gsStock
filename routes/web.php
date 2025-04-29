@@ -65,7 +65,7 @@ Route::get('/testmail', function() {
     $name = "ismo developpers";
 
     // The email sending is done using the to method on the Mail facade
-    Mail::to('kanbouh.zuhair@gmail.com')->send(new MyTestEmail($name));
+    Mail::to('smailmartil7@gmail.com')->send(new MyTestEmail($name));
     return 'mail envoyé avec success';
 });
 
@@ -77,21 +77,21 @@ Route::post("/saveAvatar", [DashboardController::class, 'saveAvatar'])->name("sa
 //Authentification
 Route::get('login', [AuthControllerd::class, 'index'])->name('login');
 
-Route::post('post-login', [AuthControllerd::class, 'postLogin'])->name('login.post'); 
+Route::post('post-login', [AuthControllerd::class, 'postLogin'])->name('login.post');
 
 Route::get('registration', [AuthControllerd::class, 'registration'])->name('register');
 
-Route::post('post-registration', [AuthControllerd::class, 'postRegistration'])->name('register.post'); 
+Route::post('post-registration', [AuthControllerd::class, 'postRegistration'])->name('register.post');
 
-Route::get('dashboard', [AuthControllerd::class, 'dashboard']); 
+Route::get('dashboard', [AuthControllerd::class, 'dashboard']);
 
 Route::get('logout', [AuthControllerd::class, 'logout'])->name('logout');
 
-// reset and forgot password 
+// reset and forgot password
 
 Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
 
-Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post');
 
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 
